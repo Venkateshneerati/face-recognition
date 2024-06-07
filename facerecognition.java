@@ -10,8 +10,6 @@ import java.io.IOException;
 import static java.lang.System.loadLibrary;
 import static org.opencv.imgproc.Imgproc.rectangle;
 
-
-
 class  DetectFaceDemo {
 
     public static void run(MultipartFile file) throws IOException {
