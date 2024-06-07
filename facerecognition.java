@@ -20,11 +20,11 @@ class  DetectFaceDemo {
         CascadeClassifier faceDetector = new CascadeClassifier();
         faceDetector.load( "C:\\Users\\Desktop\\ocv\\.idea\\haarcascade_frontalface_alt.xml" );
 
-        // Input image
+
 
         com.ocr.ocrexample.FileUploadController.convert(file);
                 Mat image = Imgcodecs.imread(String.valueOf(file));
-// Detecting faces
+
         MatOfRect faceDetections = new MatOfRect();
         faceDetector.detectMultiScale( image, faceDetections );
 
@@ -34,7 +34,7 @@ class  DetectFaceDemo {
                     rect.height + rect.y ), new Scalar( 0, 255, 0 ) );
         }
 
-        // Saving the output image
+        
         String filename = "Ouput.jpg";
         System.out.println("Face Detected Successfully ");
         Imgcodecs.imwrite( "D:\\" + filename, image );
